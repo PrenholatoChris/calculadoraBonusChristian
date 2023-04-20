@@ -10,11 +10,11 @@ import java.util.ArrayList;
  *
  * @author CONEXOS
  */
-public class Peso implements IDado{
+public class Dado implements IDado{
     public ArrayList<Double> dados;
     public ArrayList<Resultado> resultados;
 
-    public Peso(ArrayList<Double> dados) {
+    public Dado(ArrayList<Double> dados) {
         this.dados = dados;
         this.resultados = new ArrayList();
     }

@@ -5,7 +5,8 @@
 package com.ufes.calculadoraestatistica;
 
 import com.ufes.calculadoraestatistica.model.CalculadoraEstatisticaService;
-import com.ufes.calculadoraestatistica.model.Peso;
+import com.ufes.calculadoraestatistica.model.Dado;
+import com.ufes.calculadoraestatistica.model.ReadXML;
 import java.util.ArrayList;
 /**
  *
@@ -21,16 +22,18 @@ public class CalculadoraEstatistica {
         lista.add(9.1);
         lista.add(8.22);
         lista.add(7.7);
-        
-        
-        Peso peso = new Peso(lista);
+        Dado dado = new Dado(lista);
         
         CalculadoraEstatisticaService calculadora = new CalculadoraEstatisticaService();
-        calculadora.calcular(peso);
-        System.out.println(peso);
-                
-    
+        calculadora.calcular(dado);
+        System.out.println(dado);
         
+        
+        ReadXML xml = new ReadXML("../valores.xml");
+        ArrayList<Double> lista2 = xml.getData();
+        Dado dado2 = new Dado(lista2);
+        calculadora.calcular(dado2);
+        System.out.println(dado2);
     }
 
 }
