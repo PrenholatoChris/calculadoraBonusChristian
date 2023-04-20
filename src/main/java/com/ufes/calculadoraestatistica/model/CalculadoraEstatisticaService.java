@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author CONEXOS
  */
 public class CalculadoraEstatisticaService {
-    ArrayList<IOperacao> operacoes;
+    ArrayList<IOperacao> operacoes = new ArrayList();
     
     public CalculadoraEstatisticaService(){
         this.operacoes.add(new MaiorOperacao());

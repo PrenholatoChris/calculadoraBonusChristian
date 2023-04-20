@@ -16,6 +16,7 @@ public class Peso implements IDado{
 
     public Peso(ArrayList<Double> dados) {
         this.dados = dados;
+        this.resultados = new ArrayList();
     }
 
     @Override
@@ -52,8 +53,14 @@ public class Peso implements IDado{
     @Override
     public String toString(){
         String str = new String();
+        str += "A lista = [";
+        
+        for (Double item :dados){
+            str += Double.toString(item) + ", ";
+        }
+        str += "] possui os seguintes resultados.\n";
         for (Resultado resul : resultados) {
-            str += resul.getNome() + ": " + resul.getValor();
+            str += resul.getNome() + ": " + resul.getValor() + " - ";
         }
         return str;
     }

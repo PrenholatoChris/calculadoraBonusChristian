@@ -11,8 +11,8 @@ import java.util.Date;
  * @author CONEXOS
  */
 public class Resultado {
-    private String nome;
-    private Double valor;
+    private final String nome;
+    private final Double valor;
     private Date data;
     
     public Resultado(String nome, Double valor){
@@ -25,12 +25,16 @@ public class Resultado {
         return this.nome;
     }
 
+    public Date getData(){
+        return this.data;
+    }
+    
     public Double getValor() {
         return valor;
     }
 
     @Override
     public String toString() {
-        return "Resultado da operacao: " + this.nome + " = " + String.valueOf(valor);
+        return "Resultado da operacao: " + this.nome + " = " + Double.toString(valor);
     }
 }
