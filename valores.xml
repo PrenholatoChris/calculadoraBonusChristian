@@ -1,0 +1,22 @@
+<?xml version = "1.0"?>
+
+<listas>
+	<dado>
+		<valor>5.1</valor>
+		<valor>2.6</valor>
+		<valor>7.7</valor>
+		<valor>9.2</valor>
+		<valor>10</valor>
+		<valor>5.0</valor>
+		<valor>7.35</valor>
+		<valor>6.2</valor>
+	</dado>
+
+	<dado>
+		<valor>5.1</valor>
+		<valor>2.6</valor>
+		<valor>7.7</valor>
+		<valor>9.2</valor>
+		<valor>6.2</valor>
+	</dado>
+</listas>
