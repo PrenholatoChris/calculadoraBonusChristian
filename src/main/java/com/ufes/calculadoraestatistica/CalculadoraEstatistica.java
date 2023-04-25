@@ -8,10 +8,11 @@ import com.ufes.calculadoraestatistica.view.PrincipalView;
 
 /**
  *
- * @author CONEXOS
+ * @author christian.lima
  */
-public class PrincipalPresenter {
-    public PrincipalPresenter(){
-        new PrincipalView();
+public class CalculadoraEstatistica {
+    
+    public static void main(String[] args) {
+        PrincipalPresenter principal = new PrincipalPresenter();    
     }
-}   
+}
