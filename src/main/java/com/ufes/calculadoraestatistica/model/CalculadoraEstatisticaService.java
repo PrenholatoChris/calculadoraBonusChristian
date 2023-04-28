@@ -11,10 +11,10 @@ import java.util.ArrayList;
  *
  * @author CONEXOS
  */
-public class CalculadoraEstatisticaService {
-    private ArrayList<IOperacao> operacoes = new ArrayList();
+public final class CalculadoraEstatisticaService {
+    private final ArrayList<IOperacao> operacoes = new ArrayList();
     
-    private DadoCollection dadoCollection;
+    private final DadoCollection dadoCollection;
     
     public CalculadoraEstatisticaService(DadoCollection dadoCollection){
         this.dadoCollection = dadoCollection;
@@ -27,7 +27,7 @@ public class CalculadoraEstatisticaService {
         this.operacoes.add(new DesvioPadraoOperacao());
         
         
-        for (Dado dado : dadoCollection.getDadoCollection()) {
+        for (Dado dado : this.dadoCollection.getDadoCollection()) {
             calcular(dado);
             System.out.println(dado);
         }
